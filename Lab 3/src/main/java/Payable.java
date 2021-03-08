@@ -1,3 +1,8 @@
+/**
+ * Interface Payable
+ * Implements ticket price for certain locations
+ */
+
 public interface Payable {
     double getTicketPrice();
 

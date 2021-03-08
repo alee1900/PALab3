@@ -14,6 +14,7 @@ public class Main {
 
         Location v6 = new Restaurant("Red Lobster", 100, 6);
 
+        //create city and add locations to city
         City NYC = new City();
         NYC.addLocation(v1);
         NYC.addLocation(v2);
@@ -22,6 +23,7 @@ public class Main {
         NYC.addLocation(v5);
         NYC.addLocation(v6);
 
+        //set costs for locations
         v1.setCost(v2, 10);
         v1.setCost(v3, 50);
         v2.setCost(v3, 20);
@@ -32,6 +34,7 @@ public class Main {
         v4.setCost(v6, 10);
         v5.setCost(v6, 20);
 
+        //print costs for locations
         v1.printCosts();
         v2.printCosts();
         v3.printCosts();
