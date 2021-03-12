@@ -48,7 +48,7 @@ I have solved everything in compulsory.
 - Create the class TravelPlan. An instance of this class will contain a city and the preferences regarding the visiting order.
 - Implement an efficient agorithm to determine the shortest path between two given locations, conforming to the preferences.
 
-I have solved the first 3 bullet points in optional.
+I have solved the first 4 bullet points in optional.
 
 ## Bonus:
 
