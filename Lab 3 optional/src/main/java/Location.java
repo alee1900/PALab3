@@ -78,6 +78,19 @@ public abstract class Location implements Comparable<Location> {
         }
     }
 
+    /**
+     * Abstract method for calculating the opening time of a location in seconds
+     * @return the opening time in seconds
+     */
+
+    protected abstract int getTime();
+
+    /**
+     * Abstract method for printing the visiting duration of a location
+     */
+
+    protected abstract void showVisitingDuration();
+
     @Override
     public String toString() {
         return "Location{" +
@@ -103,8 +116,4 @@ public abstract class Location implements Comparable<Location> {
     public int compareTo(Location other) {
         return this.name.compareTo(other.name);
     }
-
-    protected abstract int getTime();
-
-    protected abstract void showVisitingDuration();
 }

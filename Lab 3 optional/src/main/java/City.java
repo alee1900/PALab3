@@ -58,6 +58,10 @@ public class City implements Comparable<Location> {
         locations.add(location);
     }
 
+    /**
+     * Method for printing the locations that are visitable but are not payable sorted by their opening times
+     */
+
     public void printVisitableNotPayable() {
         List<Location> locationList = new LinkedList<>();
 

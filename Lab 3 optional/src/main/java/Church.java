@@ -41,12 +41,11 @@ public class Church extends Location implements Visitable, Classifiable, Compara
     }
 
     /**
-     * Overridden setter for opening time from Visitable interface
+     * Setter for opening time from Visitable interface
      *
      * @param openingTime represents the opening time for the museum
      */
 
-    @Override
     public void setOpeningTime(LocalTime openingTime) {
         this.openingTime = openingTime;
     }
@@ -63,12 +62,11 @@ public class Church extends Location implements Visitable, Classifiable, Compara
     }
 
     /**
-     * Overridden setter for closing time from Visitable interface
+     * Setter for closing time from Visitable interface
      *
      * @param closingTime represents the closing time for the church
      */
 
-    @Override
     public void setClosingTime(LocalTime closingTime) {
         this.closingTime = closingTime;
     }
@@ -95,15 +93,31 @@ public class Church extends Location implements Visitable, Classifiable, Compara
         this.rank = rank;
     }
 
+    /**
+     * Overridden method from class Location for calculating the opening time in seconds
+     * Used for sorting the locations based on opening time
+     * @return the opening time in seconds
+     */
+
     @Override
     protected int getTime() {
         return this.openingTime.getHour() * 3600 + this.openingTime.getMinute() * 60;
     }
 
+    /**
+     * Overridden method from class Location for printing the visiting duration
+     */
+
     @Override
     public void showVisitingDuration() {
         System.out.println(this.getName() + " is open for " + Visitable.getVisitingDuration(this.openingTime, this.closingTime).getDuration());
     }
+
+    /**
+     * Overridden method compareTo used to compare opening times of 2 locations
+     * @param other represents the second location
+     * @return the result of the comparison or -1 if one of the locations is not visitable
+     */
 
     @Override
     public int compareTo(Location other) {

@@ -65,10 +65,20 @@ public class Restaurant extends Location implements Payable, Classifiable {
         this.rank = rank;
     }
 
+    /**
+     * Overridden method from class Location for calculating the opening time in seconds
+     * @return -1, because a hotel is not a visitable location and does not have opening and closing times
+     */
+
     @Override
     protected int getTime() {
         return -1;
     }
+
+    /**
+     * Overridden method from class Location for printing the visiting duration
+     * In this case, it prints that this is not a visitable location
+     */
 
     @Override
     public void showVisitingDuration() {

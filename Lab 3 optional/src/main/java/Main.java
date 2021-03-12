@@ -48,6 +48,7 @@ public class Main {
 
         System.out.println();
 
+        //print visiting duration for each location
         v1.showVisitingDuration();
         v2.showVisitingDuration();
         v3.showVisitingDuration();
