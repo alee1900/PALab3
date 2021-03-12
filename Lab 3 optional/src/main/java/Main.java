@@ -55,5 +55,7 @@ public class Main {
         v4.showVisitingDuration();
         v5.showVisitingDuration();
         v6.showVisitingDuration();
+
+        TravelPlan plan = new TravelPlan(NYC);
     }
 }
